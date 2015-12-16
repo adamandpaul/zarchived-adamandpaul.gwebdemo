@@ -1,0 +1,10 @@
+*.pyc
+*.pyo
+.*.swp
+*.egg-info
+.DS_Store
+/parts
+/src/bin
+/src/develop-eggs
+/src/eggs
+/var

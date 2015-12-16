@@ -38,7 +38,10 @@ setup(
     entry_points={
         'console_scripts': [
             'gaebuildoutdemo_app_do_nothing=gaebuildoutdemo.app.do_nothing:run'
-        ]
+        ],
+        'paste.app_factory': [
+            'main=gaebuildoutdemo.app.main:app_factory'
+        ],
 
     },
     )

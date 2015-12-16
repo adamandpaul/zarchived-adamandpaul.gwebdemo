@@ -14,9 +14,12 @@ Requirenments
 Build Environment
 -----------------
 
-    cd src
-    python bootstrap-buildout.py
-    bin/buildout
+::
+
+  cd src
+  python bootstrap-buildout.py
+  bin/buildout
+
 
 Commands
 --------

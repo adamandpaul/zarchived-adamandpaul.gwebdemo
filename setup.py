@@ -6,7 +6,7 @@ setup(
 
     # Meta Data
     name='gaebuildoutdemo.app',
-    version='1.0'
+    version='1.0',
     description='Google App Engine Buildout Demo',
     login_description='Google App Engine Buildout Demo',
     classifiers=[
@@ -30,6 +30,7 @@ setup(
     install_requires=[
         'setuptools',
         # -*- Extra requirements: -*-
+        'pyramid',
 
 
     ],

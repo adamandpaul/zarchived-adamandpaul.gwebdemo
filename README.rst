@@ -1,6 +1,6 @@
 
 ======================================================
-Google App Engine Buildout Demo (gaebuildoutdemol.app)
+Google App Engine Buildout Demo (gaebuildoutdemo.app)
 ======================================================
 
 

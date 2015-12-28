@@ -31,6 +31,8 @@ setup(
         'setuptools',
         # -*- Extra requirements: -*-
         'pyramid',
+        'pyramid_chameleon',
+        'pyramid_zcml',
 
 
     ],

@@ -18,7 +18,7 @@ setup(
         ],
     keywords='google app engine buildout demo',
     author='Adam Terrey',
-    autoher_email='software@adamandpaul.biz',
+    author_email='software@adamandpaul.biz',
     url='http://adamandpaul.biz',
     license='gpl',
 

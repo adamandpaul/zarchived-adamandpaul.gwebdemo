@@ -2,6 +2,15 @@
 from setuptools import setup, find_packages
 import os
 
+requires = [
+    'setuptools',
+    # -*- Extra requirements: -*-
+    'pyramid',
+    'pyramid_chameleon',
+    'pyramid_zcml',
+    'pyramid_debugtoolbar',
+]
+
 setup(
 
     # Meta Data
@@ -27,14 +36,8 @@ setup(
     include_package_data=True,
     zip_safe=False,
 
-    install_requires=[
-        'setuptools',
-        # -*- Extra requirements: -*-
-        'pyramid',
-        'pyramid_chameleon',
-        'pyramid_zcml',
-        'pyramid_debugtoolbar',
-    ],
+    install_requires=requires,
+    test_require=requires,
 
     entry_points={
         'console_scripts': [
@@ -45,5 +48,8 @@ setup(
         ],
 
     },
+
+    test_suite="adamandpaul.gwebdemo",
+
     )
 

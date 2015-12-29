@@ -28,7 +28,7 @@ def app_factory(global_config, **settings):
     config = Configurator(settings=settings)
 
     if is_dev:
-        config.include('pyramid_debugtoolbar')
+        #config.include('pyramid_debugtoolbar')
 
         # Google App Engine doesn't allow this.
         # so we will just overrride it so debug tool bar

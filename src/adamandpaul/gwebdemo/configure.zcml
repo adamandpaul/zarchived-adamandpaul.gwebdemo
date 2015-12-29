@@ -8,5 +8,9 @@
     view='.view.welcome_view' 
     renderer='template.pt'/>
 
+  <static
+    name='static'
+    path='static' />
+
 
 </configure>

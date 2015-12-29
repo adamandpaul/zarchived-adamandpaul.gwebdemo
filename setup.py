@@ -5,7 +5,7 @@ import os
 setup(
 
     # Meta Data
-    name='gaebuildoutdemo.app',
+    name='adamandpaul.gwebdemo',
     version='1.0',
     description='Google App Engine Buildout Demo',
     login_description='Google App Engine Buildout Demo',
@@ -33,16 +33,15 @@ setup(
         'pyramid',
         'pyramid_chameleon',
         'pyramid_zcml',
-
-
+        'pyramid_debugtoolbar',
     ],
 
     entry_points={
         'console_scripts': [
-            'gaebuildoutdemo_app_do_nothing=gaebuildoutdemo.app.do_nothing:run'
+            'gwebdemo_do_nothing=adamandpaul.gwebdemo.do_nothing:run'
         ],
         'paste.app_factory': [
-            'main=gaebuildoutdemo.app.main:app_factory'
+            'main=adamandpaul.gwebdemo.main:app_factory'
         ],
 
     },

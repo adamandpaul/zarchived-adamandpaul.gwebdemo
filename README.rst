@@ -7,8 +7,8 @@ Google App Engine Buildout Demo (gaebuildoutdemo.app)
 Requirenments
 -------------
 
-- Python with virtualenv
-- Pillow dependencies http://pillow.readthedocs.org/en/3.0.x/installation.html#external-libraries
+- Build tools (e.g. XCode build tools on MacOSX or build-essentual on Ubuntu)
+
 
 
 Build Environment
@@ -26,7 +26,7 @@ Commands
 
 Make sure your current directory is inside the ``src`` dir.
 
-``bin/serve`` - Run the google SDK serve with the application
+``bin/serve`` - Run the google SDK server with the application
 
 ``bin/test`` - Test runner
 

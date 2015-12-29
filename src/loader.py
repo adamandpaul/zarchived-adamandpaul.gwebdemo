@@ -1,6 +1,6 @@
 
 
-do_nothing_script_name = 'gaebuildoutdemo_app_do_nothing'
+do_nothing_script_name = 'gwebdemo_do_nothing'
 
 import sys
 import os

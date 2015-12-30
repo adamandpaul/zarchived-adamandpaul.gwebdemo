@@ -18,7 +18,7 @@
         <p>
             Table of top five populations taken from <a href="https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population">wikipedia</a> on the 29th December 2015. The population
             data is stored in Google App Engine DataStore database. The population words are generated
-            with the num2words package.
+            with the <a href="https://pypi.python.org/pypi/num2words">num2words</a> package.
         </p>
 
         <table class="populations">

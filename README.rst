@@ -1,13 +1,14 @@
 
-=====================================================
-Google App Engine Buildout Demo (gaebuildoutdemo.app)
-=====================================================
+==========================================================
+Google App Engine Egg Buildout Demo (adamandpaul.gwebdemo)
+==========================================================
 
 
 Requirenments
 -------------
 
 - Build tools (e.g. XCode build tools on MacOSX or build-essentual on Ubuntu)
+- Python 2.7
 
 
 

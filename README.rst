@@ -1,7 +1,7 @@
 
-==========================================================
-Google App Engine Egg Buildout Demo (adamandpaul.gwebdemo)
-==========================================================
+=====================================================
+Google App Engine Egg Web Demo (adamandpaul.gwebdemo)
+=====================================================
 
 
 Requirenments

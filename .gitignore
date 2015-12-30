@@ -3,6 +3,7 @@
 .*.swp
 *.egg-info
 .DS_Store
+.installed.cfg
 /parts
 /src/bin
 /src/develop-eggs

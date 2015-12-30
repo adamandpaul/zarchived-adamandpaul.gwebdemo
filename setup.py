@@ -42,7 +42,7 @@ setup(
 
     entry_points={
         'console_scripts': [
-            'gwebdemo_do_nothing=adamandpaul.gwebdemo.do_nothing:run'
+            'gwebdemo_do_nothing=__builtin__:int'
         ],
         'paste.app_factory': [
             'main=adamandpaul.gwebdemo.main:app_factory'

@@ -17,4 +17,5 @@ def welcome_view(request):
         info['country_local'] = pop.country_local
         info['count'] = pop.count
         population_info.append(info)
+
     return {'populations': population_info}

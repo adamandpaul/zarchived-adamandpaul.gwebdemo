@@ -9,6 +9,7 @@ requires = [
     'pyramid_chameleon',
     'pyramid_zcml',
     'unicodecsv',
+    'PyYaml',
 ]
 
 setup(
@@ -16,8 +17,8 @@ setup(
     # Meta Data
     name='adamandpaul.gwebdemo',
     version='1.0',
-    description='Google App Engine Buildout Demo',
-    login_description='Google App Engine Buildout Demo',
+    description='Google App Engine Egg Web Demo',
+    login_description='Google App Engine Egg Web Demo',
     classifiers=[
         'Programming Language :: Python :: 2.7',
         'Topic :: Internet :: WWW/HTTP :: WSGI :: Application',
@@ -25,7 +26,7 @@ setup(
         'Topic :: Software Development :: Build Tools',
         'Topic :: Software Development :: Testing',
         ],
-    keywords='google app engine buildout demo',
+    keywords='google app engine egg web demo buildout',
     author='Adam Terrey',
     author_email='software@adamandpaul.biz',
     url='http://adamandpaul.biz',

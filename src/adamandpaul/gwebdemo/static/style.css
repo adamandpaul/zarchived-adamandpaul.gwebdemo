@@ -14,11 +14,12 @@ table {
 }
 
 td {
+	padding: 4px;
 	background: #eef
 }
 
 .population {
-	width: 70%;
+	width: 40%;
 }
 
 .footer {

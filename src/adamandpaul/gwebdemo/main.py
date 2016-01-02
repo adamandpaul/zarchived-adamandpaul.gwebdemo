@@ -11,13 +11,14 @@ from pyramid.config import Configurator
 def load_countries():
     """Load country data"""
 
+    # because we are using eggs, we can use pkg_resources to read our data file
     with pkg_resources.resource_stream('adamandpaul.gwebdemo', 'country_data.csv') as data:
         data.readline() # discard header row
         for country, country_local, population in csv.reader(data):
             pop = Population(
                     country=country,
                     country_local=country_local,
-                    count=population
+                    count=int(population)
                 )
             pop.put()
 

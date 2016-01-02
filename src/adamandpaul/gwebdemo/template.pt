@@ -26,6 +26,7 @@
         <table class="populations">
             <tr tal:repeat="population populations">
                 <td class="country">${population['country']}</td>
+                <td class="country_local">${population['country_local']}</td>
                 <td class="population">${population['count']}</td>
             </tr>
         </table>

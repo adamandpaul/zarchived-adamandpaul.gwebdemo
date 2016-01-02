@@ -1,7 +1,8 @@
+
 import unittest
 
+from .main import load_countries
 from pyramid import testing
-
 from google.appengine.datastore import datastore_stub_util
 from google.appengine.ext import ndb, testbed
 
@@ -9,24 +10,25 @@ from google.appengine.ext import ndb, testbed
 class ExampleTests(unittest.TestCase):
     def setUp(self):
 
-        self.config = testing.setUp()
-
         # Initialize GAE TestBed with datastore
         # see https://cloud.google.com/appengine/docs/python/tools/localunittesting?hl=en
-        testbed = testbed.TestBed()
-        testbed.activate()
-        testbed.init_datastore_v3_stub()
-        nbd.get_context().clear_cache()
-        self.testbed = testbed
+        self.testbed = testbed.Testbed()
+        self.testbed.activate()
+        self.testbed.init_datastore_v3_stub()
+        ndb.get_context().clear_cache()
+
+        # Initialize Pyramid
+        self.config = testing.setUp()
+        load_countries()
+
 
     def tearDown(self):
-    	self.testbed.deactivate()
         testing.tearDown()
+    	self.testbed.deactivate()
 
     def test_welcome_view(self):
         from .view import welcome_view
         request = testing.DummyRequest()
         info = welcome_view(request)
-        self.assertEqual(info['project'], 'adamandpaul.gwebdemo')
-        self.assertTrue(len(info['populations']))
+        self.assertTrue(len(info['populations']) > 0)
 

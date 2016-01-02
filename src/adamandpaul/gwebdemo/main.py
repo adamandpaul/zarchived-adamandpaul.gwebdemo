@@ -1,40 +1,32 @@
+"""Main entry point for this Pyramid App"""
+
 
 import os
-
+import pkg_resources
+import unicodecsv as csv
+from .model import Population
 from pyramid.config import Configurator
 
 
-from .model import Population
-
-
 def load_countries():
-    country_data = [
-      ('China', 1374000000),
-      ('India', 1282210000),
-      ('USA', 322532000),
-      ('Indonesia', 255461700),
-      ('Brazil', 205406000 ),
-    ]
+    """Load country data"""
 
-    for country, population in country_data:
-        pop = Population(country=country, count=population)
-        pop.put()
+    with pkg_resources.resource_stream('adamandpaul.gwebdemo', 'country_data.csv') as data:
+        data.readline() # discard header row
+        for country, country_local, population in csv.reader(data):
+            pop = Population(
+                    country=country,
+                    country_local=country_local,
+                    count=population
+                )
+            pop.put()
 
 
 def app_factory(global_config, **settings):
+    """Create a Pyramid Application from the config/settings"""
 
-    is_dev = os.environ.get("SERVER_SOFTWARE", 'Dev').startswith("Dev")
 
     config = Configurator(settings=settings)
-
-    if is_dev:
-        #config.include('pyramid_debugtoolbar')
-
-        # Google App Engine doesn't allow this.
-        # so we will just overrride it so debug tool bar
-        # can do it's introspections
-        import platform
-        platform.platform = lambda: 'blah'
 
     config.include('pyramid_chameleon')
     config.include('pyramid_zcml')

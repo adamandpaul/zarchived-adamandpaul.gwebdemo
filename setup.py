@@ -8,8 +8,7 @@ requires = [
     'pyramid',
     'pyramid_chameleon',
     'pyramid_zcml',
-    'pyramid_debugtoolbar',
-    'num2words'
+    'unicodecsv',
 ]
 
 setup(
